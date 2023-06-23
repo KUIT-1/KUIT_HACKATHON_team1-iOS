@@ -14,15 +14,15 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Detail" id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8n-Bo-khg">
-                                <rect key="frame" x="0.0" y="59" width="393" height="705"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8n-Bo-khg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="2000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dp6-6y-uHJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="705"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2000"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DetailExampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="oOT-4q-DZZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="348"/>
@@ -134,6 +134,7 @@
                                 <constraints>
                                     <constraint firstItem="Dp6-6y-uHJ" firstAttribute="leading" secondItem="V8n-Bo-khg" secondAttribute="leading" id="4Z1-aU-KOD"/>
                                     <constraint firstAttribute="bottom" secondItem="Dp6-6y-uHJ" secondAttribute="bottom" id="F9W-2N-iRu"/>
+                                    <constraint firstAttribute="height" constant="2000" id="I7M-BK-rDk"/>
                                     <constraint firstItem="Dp6-6y-uHJ" firstAttribute="height" secondItem="V8n-Bo-khg" secondAttribute="height" id="MNh-iI-gGe"/>
                                     <constraint firstItem="Dp6-6y-uHJ" firstAttribute="width" secondItem="V8n-Bo-khg" secondAttribute="width" id="Mxh-Gf-rQa"/>
                                     <constraint firstAttribute="trailing" secondItem="Dp6-6y-uHJ" secondAttribute="trailing" id="O3Y-Cu-XA7"/>
@@ -141,10 +142,10 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jy6-T5-FGZ" userLabel="OrderButtonView">
-                                <rect key="frame" x="0.0" y="764" width="393" height="88"/>
+                                <rect key="frame" x="0.0" y="2059" width="393" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzb-2i-6b2">
-                                        <rect key="frame" x="24" y="26.666666666666629" width="345" height="35"/>
+                                        <rect key="frame" x="24" y="26.666666666666515" width="345" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="주문하기" cornerStyle="capsule">
                                             <color key="baseBackgroundColor" name="AccentColor"/>
@@ -294,6 +295,13 @@
                                     <constraint firstAttribute="width" constant="112" id="zuw-s4-uPm"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="컵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iY-QY-Nrg">
+                                <rect key="frame" x="24" y="289" width="62.333333333333371" height="28.666666666666629"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fFg-UH-hzw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

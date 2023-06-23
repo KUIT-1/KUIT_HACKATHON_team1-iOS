@@ -19,7 +19,7 @@ struct Category: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
-        case ImgUrl = "name"
+        case ImgUrl = "image_url"
         case TitleKor = "name_kr"
         case TitleEng = "name_eng"
     }

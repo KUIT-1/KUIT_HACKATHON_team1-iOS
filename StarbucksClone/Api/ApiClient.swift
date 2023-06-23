@@ -40,7 +40,7 @@ class ApiClient: ObservableObject {
     }
     
     func getCategory(completion: @escaping ([Category]) -> Void) {
-        let url = "\(baseUrl)/menu/mainCategory?id=1"
+        let url = "https://ebd7-2001-e60-901c-eec-e0-2d4d-40f0-6ccd.jp.ngrok.io/menu/mainCategory?id=1"
         let headers: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
