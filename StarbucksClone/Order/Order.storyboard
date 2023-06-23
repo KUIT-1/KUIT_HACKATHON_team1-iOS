@@ -18,28 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mX5-0a-Bh5">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="aWD-Wy-lLQ"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Order" id="D8z-DN-u8h">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="VLa-Rr-hWc">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="86v-c5-u8G">
-                                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
-                                            </button>
-                                            <connections>
-                                                <action selector="searchBtnTap:" destination="Y6W-OH-hqX" id="LiZ-5l-3wT"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lln-w7-chC">
                                 <rect key="frame" x="0.0" y="103" width="393" height="61"/>
                                 <subviews>
@@ -237,6 +215,7 @@
     </scenes>
     <resources>
         <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="cup.and.saucer.fill" catalog="system" width="128" height="91"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="MainGreen">
             <color red="0.40799999237060547" green="0.68199998140335083" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
