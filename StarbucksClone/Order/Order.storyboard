@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +37,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tHJ-W1-VaA">
-                                <rect key="frame" x="0.0" y="172" width="393" height="597"/>
+                                <rect key="frame" x="0.0" y="164" width="393" height="560"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="115" id="IKK-Dm-klj" customClass="CategoryTableViewCell" customModule="StarbucksClone" customModuleProvider="target">
@@ -84,17 +85,55 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" restorationIdentifier="View1" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-Vm-otu">
+                                <rect key="frame" x="0.0" y="724" width="393" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-cS-9sQ">
+                                        <rect key="frame" x="16" y="5" width="316" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="316" id="Tfx-7V-n46"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.95191688139999997" green="0.95191688139999997" blue="0.95191688139999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="주문할 매장을 선택해 주세요">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-6l-bfT">
+                                        <rect key="frame" x="339" y="5" width="49" height="35"/>
+                                        <color key="tintColor" name="MainGreen"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bag.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="basketBtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bb9-Ko-AfO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lxF-cS-9sQ" firstAttribute="leading" secondItem="hgh-Vm-otu" secondAttribute="leading" constant="16" id="2lD-tl-VRU"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZfJ-6l-bfT" secondAttribute="bottom" constant="5" id="Jzu-ou-xsy"/>
+                                    <constraint firstAttribute="height" constant="45" id="Nrg-e8-saZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZfJ-6l-bfT" secondAttribute="trailing" constant="5" id="XCC-Ah-I19"/>
+                                    <constraint firstItem="ZfJ-6l-bfT" firstAttribute="top" secondItem="hgh-Vm-otu" secondAttribute="top" constant="5" id="Xfy-hl-d37"/>
+                                    <constraint firstAttribute="bottom" secondItem="lxF-cS-9sQ" secondAttribute="bottom" constant="6" id="ZK2-4g-xtW"/>
+                                    <constraint firstItem="lxF-cS-9sQ" firstAttribute="top" secondItem="hgh-Vm-otu" secondAttribute="top" constant="5" id="mJY-hP-uak"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tHJ-W1-VaA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="23e-9x-hPd"/>
                             <constraint firstItem="lln-w7-chC" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="2Ul-lu-P5d"/>
+                            <constraint firstItem="hgh-Vm-otu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4Vu-Bd-eRt"/>
                             <constraint firstItem="tHJ-W1-VaA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9eI-ht-r4C"/>
-                            <constraint firstItem="tHJ-W1-VaA" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Eae-no-Dug"/>
+                            <constraint firstItem="tHJ-W1-VaA" firstAttribute="bottom" secondItem="hgh-Vm-otu" secondAttribute="top" id="Eae-no-Dug"/>
                             <constraint firstItem="lln-w7-chC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FAe-XR-1bY"/>
                             <constraint firstItem="lln-w7-chC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="O7c-KU-Pp6"/>
-                            <constraint firstItem="tHJ-W1-VaA" firstAttribute="top" secondItem="lln-w7-chC" secondAttribute="bottom" constant="8" symbolic="YES" id="jdS-ji-cmR"/>
+                            <constraint firstItem="hgh-Vm-otu" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hIN-hX-9gy"/>
+                            <constraint firstItem="hgh-Vm-otu" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="j32-3H-c7h"/>
+                            <constraint firstItem="tHJ-W1-VaA" firstAttribute="top" secondItem="lln-w7-chC" secondAttribute="bottom" id="jdS-ji-cmR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y34-Yq-po8">
@@ -162,7 +201,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="MainGreen">
+            <color red="0.40799999237060547" green="0.68199998140335083" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

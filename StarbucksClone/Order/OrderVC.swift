@@ -50,6 +50,21 @@ class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
         }
     }
     
+    @IBAction func basketBtnTap(_ sender: Any) {
+        
+        print("Search Button Tapped")
+        
+        // 검색 화면 전환
+        let storyboard = UIStoryboard(name: "Basket", bundle: nil)
+        if let basketVC = storyboard.instantiateViewController(withIdentifier: "Basket") as? BasketVC {
+            
+            self.tabBarController?.tabBar.isHidden = true
+            self.navigationController?.pushViewController(basketVC, animated: true)
+        }
+        
+    }
+    
+    
     func pushSearchResultView(searchText: String) {
         let storyboard = UIStoryboard(name: "SearchResult", bundle: nil)
         if let searchResultVC = storyboard.instantiateViewController(withIdentifier: "SearchResult") as? SearchResultVC {
@@ -90,6 +105,7 @@ class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
         self.navigationController?.pushViewController(menuVC!, animated: true)
 
     }
+    
 }
 
 // Category Table View Cell Data 주입
