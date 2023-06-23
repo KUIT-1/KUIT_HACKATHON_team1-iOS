@@ -102,6 +102,9 @@ extension OrderVC: UITableViewDataSource{
         cell.categoryTitleKor.text = Categories[indexPath.row].TitleKor
         cell.categoryTitleEng.text = Categories[indexPath.row].TitleEng
         
+        cell.categoryImage.clipsToBounds = true
+        cell.categoryImage.layer.cornerRadius = 42.5
+        
         return cell
     }
 }
