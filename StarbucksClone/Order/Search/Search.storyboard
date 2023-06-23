@@ -85,40 +85,6 @@
             </objects>
             <point key="canvasLocation" x="5" y="-28"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="HWJ-gN-F9Z">
-            <objects>
-                <viewController id="8lR-Yo-Vnv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IiW-3N-2cV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="qnN-95-6KA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fqh-40-84O"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T1I-fz-6se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="931" y="836"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Coh-0Q-zDj">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IvR-gQ-ZRg" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HfZ-6f-HfV">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8lR-Yo-Vnv" kind="relationship" relationship="rootViewController" id="6HY-60-kvQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SqC-0x-AW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4" y="836"/>
-        </scene>
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>

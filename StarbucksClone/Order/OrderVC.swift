@@ -7,32 +7,9 @@
 
 import UIKit
 
-class OrderVC: UIViewController, pushSearchResultView {
-    
-    func pushSearchResultView(searchText: String) {
-        let storyboard = UIStoryboard(name: "SearchResult", bundle: nil)
-        if let searchResultVC = storyboard.instantiateViewController(withIdentifier: "SearchResult") as? SearchResultVC {
-            
-            // 검색 결과 데이터 전달
-            searchResultVC.searchText = searchText
-            
-            // OrderVC의 내비게이션 스택에 푸시
-            print(self.navigationController)
-            
-            self.navigationController?.pushViewController(searchResultVC, animated: true)
-            self.tabBarController?.tabBar.isHidden = true
-        }
-    }
-    
-    
+class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
     
     @IBOutlet weak var categoryTableView: UITableView!
-    
-    struct Category {
-        var ImgUrl: String
-        var TitleKor: String
-        var TitleEng: String
-    }
     
     var Categories: [Category] = []
     
@@ -45,9 +22,9 @@ class OrderVC: UIViewController, pushSearchResultView {
         
         self.navigationItem.title = "Order"
         
-        
         // Do any additional setup after loading the view.
         categoryTableView.dataSource = self
+        categoryTableView.delegate = self
         
         // ## API 호출 및 데이터 받아오기 ?
         // Json -> Category Struct 변환
@@ -73,6 +50,46 @@ class OrderVC: UIViewController, pushSearchResultView {
         }
     }
     
+    func pushSearchResultView(searchText: String) {
+        let storyboard = UIStoryboard(name: "SearchResult", bundle: nil)
+        if let searchResultVC = storyboard.instantiateViewController(withIdentifier: "SearchResult") as? SearchResultVC {
+            
+            // 검색 결과 데이터 전달
+            searchResultVC.searchText = searchText
+            
+            // OrderVC의 내비게이션 스택에 푸시
+            print(self.navigationController)
+            
+            self.navigationController?.pushViewController(searchResultVC, animated: true)
+            self.tabBarController?.tabBar.isHidden = true
+        }
+    }
+    
+//    func pushMenuListView(categoryTitle: String) {
+//        print("## 1")
+//        let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC")
+//        print("## " + (menuVC?.navigationController?.description)!)
+//        print("## 2")
+//        print("## " + self.description)
+//        self.navigationController?.pushViewController(menuVC!, animated: true)
+//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        print("@## 1")
+        let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as? MenuVC
+//        print("@## " + (menuVC?.navigationController?.description)!)
+        print("@## 2")
+        print("@## " + self.description)
+        menuVC?.categoryName = Categories[indexPath.row].TitleKor
+//        self.tabBarController?.tabBar.isHidden = true
+//        self.navigationController?.navigationBar.topItem?.title = Categories[indexPath.row].TitleKor
+        
+        self.navigationController?.pushViewController(menuVC!, animated: true)
+
+    }
 }
 
 // Category Table View Cell Data 주입
@@ -92,4 +109,15 @@ extension OrderVC: UITableViewDataSource{
         
         return cell
     }
+}
+
+struct Category {
+    var ImgUrl: String
+    var TitleKor: String
+    var TitleEng: String
+}
+
+protocol pushNextView{
+    func pushSearchResultView(searchText: String)
+//    func pushMenuListView(categoryTitle: String)
 }

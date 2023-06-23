@@ -55,7 +55,3 @@ extension SearchVC: UITextFieldDelegate{
     }
 
 }
-    
-protocol pushSearchResultView{
-    func pushSearchResultView(searchText: String)
-}
