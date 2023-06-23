@@ -21,6 +21,9 @@ class OrderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Order"
+
 
         // Do any additional setup after loading the view.
         categoryTableView.dataSource = self
@@ -36,12 +39,14 @@ class OrderVC: UIViewController {
         Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀6", TitleEng: "eng title6"))
         
     }
-    
+
     @IBAction func searchBtnTap(_ sender: Any) {
         print("Search Button Tapped")
         
         // 검색 화면 전환
+        
     }
+    
     
 }
 
