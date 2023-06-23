@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E606EEC2A45F22500FC6247 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E606EEA2A45F22500FC6247 /* MenuCell.swift */; };
+		2E606EED2A45F22500FC6247 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E606EEB2A45F22500FC6247 /* MenuCell.xib */; };
 		2E79452B2A453CC8006D7D9E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E79452A2A453CC8006D7D9E /* Home.storyboard */; };
 		2E79452D2A453CCE006D7D9E /* Pay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E79452C2A453CCE006D7D9E /* Pay.storyboard */; };
 		2E79452F2A453CD3006D7D9E /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E79452E2A453CD3006D7D9E /* Order.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E606EEA2A45F22500FC6247 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		2E606EEB2A45F22500FC6247 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		2E79452A2A453CC8006D7D9E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2E79452C2A453CCE006D7D9E /* Pay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pay.storyboard; sourceTree = "<group>"; };
 		2E79452E2A453CD3006D7D9E /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				2E7E19082A4560DB00DABCA0 /* CategoryTableViewCell.swift */,
 				2E79452E2A453CD3006D7D9E /* Order.storyboard */,
 				2E7E191D2A45CC5C00DABCA0 /* MenuVC.swift */,
+				2E606EEA2A45F22500FC6247 /* MenuCell.swift */,
+				2E606EEB2A45F22500FC6247 /* MenuCell.xib */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 			files = (
 				5115FCAD2A4588F2007C2ED9 /* Basket.storyboard in Resources */,
 				2E7945312A453CD7006D7D9E /* Shop.storyboard in Resources */,
+				2E606EED2A45F22500FC6247 /* MenuCell.xib in Resources */,
 				5115FCA42A45324E007C2ED9 /* .gitignore in Resources */,
 				2E7E19142A458B6000DABCA0 /* SearchResult.storyboard in Resources */,
 				2E7945332A453CDB006D7D9E /* Other.storyboard in Resources */,
@@ -326,6 +333,7 @@
 				2E7E191E2A45CC5C00DABCA0 /* MenuVC.swift in Sources */,
 				2E7E19072A455BAE00DABCA0 /* OrderVC.swift in Sources */,
 				5115FC902A4530FD007C2ED9 /* AppDelegate.swift in Sources */,
+				2E606EEC2A45F22500FC6247 /* MenuCell.swift in Sources */,
 				5115FC922A4530FD007C2ED9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
