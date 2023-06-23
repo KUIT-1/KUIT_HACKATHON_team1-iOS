@@ -63,6 +63,8 @@ extension SearchResultVC: UITableViewDelegate, UITableViewDataSource {
         cell.menuTitleEng.text = menus[indexPath.row].TitleEng
         cell.menuPrice.text = menus[indexPath.row].Price + " 원"
         
+        cell.menuImage.layer.cornerRadius = 50
+        
         return cell
         
     }

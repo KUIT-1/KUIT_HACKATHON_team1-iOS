@@ -13,8 +13,6 @@ class CategoryTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryTitleKor: UILabel!
     @IBOutlet weak var categoryTitleEng: UILabel!
     
-//    weak var delegate: OrderVC?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,7 +23,6 @@ class CategoryTableViewCell: UITableViewCell {
         
         print("TableViewCell Tapped / categoryTitleKor is " + categoryTitleKor.text!)
         
-//        self.delegate?.pushMenuListView(categoryTitle: categoryTitleKor.text!)
     }
 
 }

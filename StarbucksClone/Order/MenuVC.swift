@@ -29,7 +29,6 @@ class MenuVC: UIViewController {
         menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "4코리안타이틀", TitleEng: "4EngTitle", Price: "3000"))
         menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "5코리안타이틀", TitleEng: "5EngTitle", Price: "1230"))
         
-        
         // TableView에 Cell 등록
         let nibName = UINib(nibName: "MenuCell", bundle: nil)
         menuListTableView.register(nibName, forCellReuseIdentifier: "MenuCell")
@@ -56,6 +55,8 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
         cell.menuTitleEng.text = menus[indexPath.row].TitleEng
         cell.menuPrice.text = menus[indexPath.row].Price + " 원"
         
+        cell.menuImage.layer.cornerRadius = 50
+        
         return cell
         
     }
@@ -68,7 +69,6 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
         let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "Detail")
 
         self.tabBarController?.tabBar.isHidden = true
-//        self.navigationController?.navigationBar.topItem?.title = Categories[indexPath.row].TitleKor
         
         self.navigationController?.pushViewController(detailVC, animated: true)
 

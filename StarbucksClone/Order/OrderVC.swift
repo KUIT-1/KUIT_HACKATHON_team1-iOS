@@ -22,19 +22,8 @@ class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
         
         self.navigationItem.title = "Order"
         
-        // Do any additional setup after loading the view.
         categoryTableView.dataSource = self
         categoryTableView.delegate = self
-        
-        // ## API 호출 및 데이터 받아오기 ?
-        // Json -> Category Struct 변환
-//        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀", TitleEng: "eng title"))
-//        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀1", TitleEng: "eng title1"))
-//        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀2", TitleEng: "eng title2"))
-//        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀3", TitleEng: "eng title3"))
-//        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀4", TitleEng: "eng title4"))
-//        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀5", TitleEng: "eng title5"))
-//        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀6", TitleEng: "eng title6"))
         
         ApiClient().getCategory { categoryArr in
             self.Categories = categoryArr
@@ -66,7 +55,6 @@ class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
             self.tabBarController?.tabBar.isHidden = true
             self.navigationController?.pushViewController(basketVC, animated: true)
         }
-        
     }
     
     
@@ -85,27 +73,13 @@ class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
         }
     }
     
-//    func pushMenuListView(categoryTitle: String) {
-//        print("## 1")
-//        let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC")
-//        print("## " + (menuVC?.navigationController?.description)!)
-//        print("## 2")
-//        print("## " + self.description)
-//        self.navigationController?.pushViewController(menuVC!, animated: true)
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         tableView.deselectRow(at: indexPath, animated: true)
         
-        print("@## 1")
         let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as? MenuVC
-//        print("@## " + (menuVC?.navigationController?.description)!)
-        print("@## 2")
-        print("@## " + self.description)
+
         menuVC?.categoryName = Categories[indexPath.row].TitleKor
-//        self.tabBarController?.tabBar.isHidden = true
-//        self.navigationController?.navigationBar.topItem?.title = Categories[indexPath.row].TitleKor
         
         self.navigationController?.pushViewController(menuVC!, animated: true)
 
@@ -134,5 +108,4 @@ extension OrderVC: UITableViewDataSource{
 
 protocol pushNextView{
     func pushSearchResultView(searchText: String)
-//    func pushMenuListView(categoryTitle: String)
 }
