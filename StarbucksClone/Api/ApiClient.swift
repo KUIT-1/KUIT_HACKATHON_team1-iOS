@@ -9,11 +9,11 @@ import Foundation
 import Alamofire
 
 
-class ApiClient {
+class ApiClient: ObservableObject {
     let baseUrl = ""
     
     func getRecommendMenu(completion: @escaping ([RecommendMenu]) -> Void) {
-        let url = "\(baseUrl)/menu/recommend"
+        let url = "https://5374-2001-e60-901c-eec-e0-2d4d-40f0-6ccd.jp.ngrok.io/menu/recommend"
         let headers: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
@@ -26,7 +26,7 @@ class ApiClient {
                 switch response.result {
                 case .success(let response):
                     var menuArray: [RecommendMenu] = []
-                    for menu in response.result {
+                    for menu in response.recommendMenuDtos {
                         let title = menu.title
                         let imageURL = menu.imageURL
                         menuArray.append(RecommendMenu(title: title, imageURL: imageURL))

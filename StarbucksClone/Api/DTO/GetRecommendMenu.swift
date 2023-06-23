@@ -8,5 +8,5 @@
 import Foundation
 
 struct GetRecommendMenu: Codable {
-    let result: [RecommendMenu]
+    let recommendMenuDtos: [RecommendMenu]
 }

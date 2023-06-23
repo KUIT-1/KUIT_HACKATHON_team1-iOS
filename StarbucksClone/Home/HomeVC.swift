@@ -10,6 +10,11 @@ import UIKit
 struct RecommendMenu: Codable {
     let title: String
     let imageURL: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case title = "name"
+        case imageURL = "imageUrl"
+    }
 }
 
 class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -21,12 +26,14 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     @IBOutlet weak var RecommendCollectionView: UICollectionView!
     
-    var menuArray = [RecommendMenu(title: "부드러운 카스테라", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
-                     RecommendMenu(title: "티라미수 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
-                     RecommendMenu(title: "레몬 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
-                     RecommendMenu(title: "초콜릿 생크림 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
-                     RecommendMenu(title: "바스크 치즈 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80")]
+//    var menuArray = [RecommendMenu(title: "부드러운 카스테라", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
+//                     RecommendMenu(title: "티라미수 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
+//                     RecommendMenu(title: "레몬 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
+//                     RecommendMenu(title: "초콜릿 생크림 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"),
+//                     RecommendMenu(title: "바스크 치즈 케이크", imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80")]
     
+    var menuArray: [RecommendMenu] = []
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +56,10 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         RecommendCollectionView.delegate = self
         RecommendCollectionView.isScrollEnabled = true
         
-//        ApiClient().getRecommendMenu { menuArr in
-//            self.menuArray = menuArr
-//        }
+        ApiClient().getRecommendMenu { menuArr in
+            self.menuArray = menuArr
+            self.RecommendCollectionView.reloadData()
+        }
         
     }
 
