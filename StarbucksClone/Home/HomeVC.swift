@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct RecommendMenu {
+struct RecommendMenu: Codable {
     let title: String
     let imageURL: String
 }
@@ -48,6 +48,10 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         RecommendCollectionView.dataSource = self
         RecommendCollectionView.delegate = self
         RecommendCollectionView.isScrollEnabled = true
+        
+//        ApiClient().getRecommendMenu { menuArr in
+//            self.menuArray = menuArr
+//        }
         
     }
 
