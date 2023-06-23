@@ -28,13 +28,18 @@ class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
         
         // ## API 호출 및 데이터 받아오기 ?
         // Json -> Category Struct 변환
-        Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀", TitleEng: "eng title"))
-        Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀1", TitleEng: "eng title1"))
-        Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀2", TitleEng: "eng title2"))
-        Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀3", TitleEng: "eng title3"))
-        Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀4", TitleEng: "eng title4"))
-        Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀5", TitleEng: "eng title5"))
-        Categories.append(Category(ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀6", TitleEng: "eng title6"))
+        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀", TitleEng: "eng title"))
+        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀1", TitleEng: "eng title1"))
+        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀2", TitleEng: "eng title2"))
+        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀3", TitleEng: "eng title3"))
+        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀4", TitleEng: "eng title4"))
+        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀5", TitleEng: "eng title5"))
+        Categories.append(Category(id: 1, ImgUrl: "https://picsum.photos/85", TitleKor: "코리안 타이틀6", TitleEng: "eng title6"))
+        
+//        ApiClient().getCategory { categoryArr in
+//            self.Categories = categoryArr
+//            self.categoryTableView.reloadData()
+//        }
         
     }
     
@@ -125,12 +130,6 @@ extension OrderVC: UITableViewDataSource{
         
         return cell
     }
-}
-
-struct Category {
-    var ImgUrl: String
-    var TitleKor: String
-    var TitleEng: String
 }
 
 protocol pushNextView{

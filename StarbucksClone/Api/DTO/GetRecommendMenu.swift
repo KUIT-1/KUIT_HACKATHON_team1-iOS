@@ -10,3 +10,13 @@ import Foundation
 struct GetRecommendMenu: Codable {
     let recommendMenuDtos: [RecommendMenu]
 }
+
+struct RecommendMenu: Codable {
+    let title: String
+    let imageURL: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case title = "name"
+        case imageURL = "imageUrl"
+    }
+}

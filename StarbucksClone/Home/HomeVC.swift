@@ -7,16 +7,6 @@
 
 import UIKit
 
-struct RecommendMenu: Codable {
-    let title: String
-    let imageURL: String
-    
-    private enum CodingKeys: String, CodingKey {
-        case title = "name"
-        case imageURL = "imageUrl"
-    }
-}
-
 class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var LoginBoxView: UIView!
     @IBOutlet weak var LoginButton: UIButton!
