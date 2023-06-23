@@ -68,4 +68,17 @@ extension SearchResultVC: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
+    
+    // select 시
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "Detail")
+
+        self.tabBarController?.tabBar.isHidden = true
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
+
+    }
 }
