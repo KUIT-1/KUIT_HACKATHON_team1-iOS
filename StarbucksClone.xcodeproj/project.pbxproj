@@ -38,6 +38,7 @@
 		51AB7D572A45E642003CA0B4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 51AB7D562A45E642003CA0B4 /* Alamofire */; };
 		51AB7D592A45E7EA003CA0B4 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB7D582A45E7EA003CA0B4 /* ApiClient.swift */; };
 		51AB7D5C2A45EDEA003CA0B4 /* GetRecommendMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB7D5B2A45EDEA003CA0B4 /* GetRecommendMenu.swift */; };
+		51AB7D622A45F850003CA0B4 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AB7D612A45F850003CA0B4 /* Detail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		51AB7D532A45B1C4003CA0B4 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
 		51AB7D582A45E7EA003CA0B4 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		51AB7D5B2A45EDEA003CA0B4 /* GetRecommendMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecommendMenu.swift; sourceTree = "<group>"; };
+		51AB7D612A45F850003CA0B4 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		2E7E190A2A4567AA00DABCA0 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				51AB7D5E2A45F824003CA0B4 /* Detail */,
 				5115FCAB2A4588E1007C2ED9 /* Basket */,
 				2E7E19172A45BAD100DABCA0 /* Search */,
 				2E7E19062A455BAE00DABCA0 /* OrderVC.swift */,
@@ -229,6 +232,14 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		51AB7D5E2A45F824003CA0B4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				51AB7D612A45F850003CA0B4 /* Detail.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +316,7 @@
 				5115FCAA2A4584E3007C2ED9 /* .gitattributes in Resources */,
 				2E79452D2A453CCE006D7D9E /* Pay.storyboard in Resources */,
 				2E79452F2A453CD3006D7D9E /* Order.storyboard in Resources */,
+				51AB7D622A45F850003CA0B4 /* Detail.storyboard in Resources */,
 				5115FC992A4530FE007C2ED9 /* Assets.xcassets in Resources */,
 				5115FC972A4530FD007C2ED9 /* Main.storyboard in Resources */,
 			);
