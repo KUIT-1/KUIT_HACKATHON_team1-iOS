@@ -19,6 +19,8 @@
 		5115FC992A4530FE007C2ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5115FC982A4530FE007C2ED9 /* Assets.xcassets */; };
 		5115FC9C2A4530FE007C2ED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5115FC9A2A4530FE007C2ED9 /* LaunchScreen.storyboard */; };
 		5115FCA42A45324E007C2ED9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5115FCA32A45324D007C2ED9 /* .gitignore */; };
+		5115FCA62A4559D6007C2ED9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FCA52A4559D6007C2ED9 /* HomeVC.swift */; };
+		5115FCA82A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		5115FC9B2A4530FE007C2ED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5115FC9D2A4530FE007C2ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5115FCA32A45324D007C2ED9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5115FCA52A4559D6007C2ED9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendMenyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				5115FC932A4530FD007C2ED9 /* ViewController.swift */,
 				5115FC982A4530FE007C2ED9 /* Assets.xcassets */,
 				5115FC9D2A4530FE007C2ED9 /* Info.plist */,
+				5115FCA52A4559D6007C2ED9 /* HomeVC.swift */,
+				5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */,
 			);
 			path = StarbucksClone;
 			sourceTree = "<group>";
@@ -170,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5115FCA82A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift in Sources */,
 				5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */,
+				5115FCA62A4559D6007C2ED9 /* HomeVC.swift in Sources */,
 				5115FC902A4530FD007C2ED9 /* AppDelegate.swift in Sources */,
 				5115FC922A4530FD007C2ED9 /* SceneDelegate.swift in Sources */,
 			);
