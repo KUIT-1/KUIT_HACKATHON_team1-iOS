@@ -82,6 +82,8 @@
 		2E7E190B2A45680600DABCA0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */,
+				5115FCA52A4559D6007C2ED9 /* HomeVC.swift */,
 				2E79452A2A453CC8006D7D9E /* Home.storyboard */,
 			);
 			path = Home;
@@ -142,8 +144,6 @@
 				5115FC912A4530FD007C2ED9 /* SceneDelegate.swift */,
 				5115FC982A4530FE007C2ED9 /* Assets.xcassets */,
 				5115FC9D2A4530FE007C2ED9 /* Info.plist */,
-				5115FCA52A4559D6007C2ED9 /* HomeVC.swift */,
-				5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */,
 			);
 			path = StarbucksClone;
 			sourceTree = "<group>";
