@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5BF4532A4631DE00CAB47D /* GetMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BF4522A4631DE00CAB47D /* GetMenu.swift */; };
+		2E5BF4552A46363C00CAB47D /* GetSearchedMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BF4542A46363C00CAB47D /* GetSearchedMenu.swift */; };
 		2E606EEC2A45F22500FC6247 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E606EEA2A45F22500FC6247 /* MenuCell.swift */; };
 		2E606EED2A45F22500FC6247 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E606EEB2A45F22500FC6247 /* MenuCell.xib */; };
 		2E79452B2A453CC8006D7D9E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E79452A2A453CC8006D7D9E /* Home.storyboard */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E5BF4522A4631DE00CAB47D /* GetMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMenu.swift; sourceTree = "<group>"; };
+		2E5BF4542A46363C00CAB47D /* GetSearchedMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchedMenu.swift; sourceTree = "<group>"; };
 		2E606EEA2A45F22500FC6247 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		2E606EEB2A45F22500FC6247 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		2E79452A2A453CC8006D7D9E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -221,7 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				51AB7D5B2A45EDEA003CA0B4 /* GetRecommendMenu.swift */,
+				2E5BF4522A4631DE00CAB47D /* GetMenu.swift */,
 				51AB7D632A462021003CA0B4 /* GetCategory.swift */,
+				2E5BF4542A46363C00CAB47D /* GetSearchedMenu.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 				5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */,
 				5115FCA62A4559D6007C2ED9 /* HomeVC.swift in Sources */,
 				51AB7D592A45E7EA003CA0B4 /* ApiClient.swift in Sources */,
+				2E5BF4532A4631DE00CAB47D /* GetMenu.swift in Sources */,
 				51AB7D542A45B1C4003CA0B4 /* BasketTableViewCell.swift in Sources */,
 				2E7E19092A4560DB00DABCA0 /* CategoryTableViewCell.swift in Sources */,
 				5115FCAF2A458C88007C2ED9 /* BasketVC.swift in Sources */,
@@ -345,6 +352,7 @@
 				2E7E19092A4560DB00DABCA0 /* CategoryTableViewCell.swift in Sources */,
 				2E7E191A2A45BDAE00DABCA0 /* LoadUrlImage.swift in Sources */,
 				51AB7D5C2A45EDEA003CA0B4 /* GetRecommendMenu.swift in Sources */,
+				2E5BF4552A46363C00CAB47D /* GetSearchedMenu.swift in Sources */,
 				5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */,
 				2E7E191E2A45CC5C00DABCA0 /* MenuVC.swift in Sources */,
 				2E7E19072A455BAE00DABCA0 /* OrderVC.swift in Sources */,

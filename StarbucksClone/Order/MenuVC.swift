@@ -10,6 +10,7 @@ import UIKit
 class MenuVC: UIViewController {
 
     var categoryName: String?
+    var categoryId: Int?
     var menus: [Menu] = []
     
     @IBOutlet weak var menuListTableView: UITableView!
@@ -23,15 +24,15 @@ class MenuVC: UIViewController {
         menuListTableView.delegate = self
         menuListTableView.rowHeight = 120
         
-        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "1코리안타이틀", TitleEng: "1EngTitle", Price: "11000"))
-        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "2코리안타이틀", TitleEng: "2EngTitle", Price: "10000"))
-        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "3코리안타이틀", TitleEng: "3EngTitle", Price: "200"))
-        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "4코리안타이틀", TitleEng: "4EngTitle", Price: "3000"))
-        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "5코리안타이틀", TitleEng: "5EngTitle", Price: "1230"))
-        
         // TableView에 Cell 등록
         let nibName = UINib(nibName: "MenuCell", bundle: nil)
         menuListTableView.register(nibName, forCellReuseIdentifier: "MenuCell")
+        
+        // Menu 리스트 Get API 호출
+        ApiClient().getMenu(categoryId: self.categoryId!) { menuArr in
+            self.menus = menuArr
+            self.menuListTableView.reloadData()
+        }
         
     }
 
@@ -53,7 +54,7 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
         cell.menuImage.load(url: url!)
         cell.menuTitleKor.text = menus[indexPath.row].TitleKor
         cell.menuTitleEng.text = menus[indexPath.row].TitleEng
-        cell.menuPrice.text = menus[indexPath.row].Price + " 원"
+        cell.menuPrice.text = String(menus[indexPath.row].Price) + " 원"
         
         cell.menuImage.layer.cornerRadius = 50
         

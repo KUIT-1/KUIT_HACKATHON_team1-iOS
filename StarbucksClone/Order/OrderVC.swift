@@ -80,6 +80,7 @@ class OrderVC: UIViewController, pushNextView, UITableViewDelegate {
         let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as? MenuVC
 
         menuVC?.categoryName = Categories[indexPath.row].TitleKor
+        menuVC?.categoryId = Categories[indexPath.row].id
         
         self.navigationController?.pushViewController(menuVC!, animated: true)
 
