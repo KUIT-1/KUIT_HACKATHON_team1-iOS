@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E79452B2A453CC8006D7D9E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E79452A2A453CC8006D7D9E /* Home.storyboard */; };
+		2E79452D2A453CCE006D7D9E /* Pay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E79452C2A453CCE006D7D9E /* Pay.storyboard */; };
+		2E79452F2A453CD3006D7D9E /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E79452E2A453CD3006D7D9E /* Order.storyboard */; };
+		2E7945312A453CD7006D7D9E /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7945302A453CD7006D7D9E /* Shop.storyboard */; };
+		2E7945332A453CDB006D7D9E /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7945322A453CDB006D7D9E /* Other.storyboard */; };
 		5115FC902A4530FD007C2ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FC8F2A4530FD007C2ED9 /* AppDelegate.swift */; };
 		5115FC922A4530FD007C2ED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FC912A4530FD007C2ED9 /* SceneDelegate.swift */; };
 		5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FC932A4530FD007C2ED9 /* ViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E79452A2A453CC8006D7D9E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2E79452C2A453CCE006D7D9E /* Pay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pay.storyboard; sourceTree = "<group>"; };
+		2E79452E2A453CD3006D7D9E /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		2E7945302A453CD7006D7D9E /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
+		2E7945322A453CDB006D7D9E /* Other.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		5115FC8C2A4530FD007C2ED9 /* StarbucksClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5115FC8F2A4530FD007C2ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5115FC912A4530FD007C2ED9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +49,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E7945292A453C92006D7D9E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5115FC952A4530FD007C2ED9 /* Main.storyboard */,
+				5115FC9A2A4530FE007C2ED9 /* LaunchScreen.storyboard */,
+				2E79452A2A453CC8006D7D9E /* Home.storyboard */,
+				2E79452C2A453CCE006D7D9E /* Pay.storyboard */,
+				2E79452E2A453CD3006D7D9E /* Order.storyboard */,
+				2E7945302A453CD7006D7D9E /* Shop.storyboard */,
+				2E7945322A453CDB006D7D9E /* Other.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		5115FC832A4530FD007C2ED9 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +83,11 @@
 		5115FC8E2A4530FD007C2ED9 /* StarbucksClone */ = {
 			isa = PBXGroup;
 			children = (
+				2E7945292A453C92006D7D9E /* Storyboards */,
 				5115FC8F2A4530FD007C2ED9 /* AppDelegate.swift */,
 				5115FC912A4530FD007C2ED9 /* SceneDelegate.swift */,
 				5115FC932A4530FD007C2ED9 /* ViewController.swift */,
-				5115FC952A4530FD007C2ED9 /* Main.storyboard */,
 				5115FC982A4530FE007C2ED9 /* Assets.xcassets */,
-				5115FC9A2A4530FE007C2ED9 /* LaunchScreen.storyboard */,
 				5115FC9D2A4530FE007C2ED9 /* Info.plist */,
 			);
 			path = StarbucksClone;
@@ -128,8 +151,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7945312A453CD7006D7D9E /* Shop.storyboard in Resources */,
 				5115FCA42A45324E007C2ED9 /* .gitignore in Resources */,
+				2E7945332A453CDB006D7D9E /* Other.storyboard in Resources */,
+				2E79452B2A453CC8006D7D9E /* Home.storyboard in Resources */,
 				5115FC9C2A4530FE007C2ED9 /* LaunchScreen.storyboard in Resources */,
+				2E79452D2A453CCE006D7D9E /* Pay.storyboard in Resources */,
+				2E79452F2A453CD3006D7D9E /* Order.storyboard in Resources */,
 				5115FC992A4530FE007C2ED9 /* Assets.xcassets in Resources */,
 				5115FC972A4530FD007C2ED9 /* Main.storyboard in Resources */,
 			);
