@@ -9,27 +9,55 @@ import UIKit
 
 class MenuVC: UIViewController {
 
-    @IBOutlet weak var menuNavigationBar: UINavigationBar!
     var categoryName: String?
+    var menus: [Menu] = []
+    
+    @IBOutlet weak var menuListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuNavigationBar.topItem?.title = categoryName
-        // Do any additional setup after loading the view.
-//        self.tabBarController?.tabBar.isHidden = true
-//        self.navigationController?.title = Categories[indexPath.row].TitleKor
-    }
-    
+        self.title = categoryName
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        menuListTableView.dataSource = self
+        menuListTableView.delegate = self
+        menuListTableView.rowHeight = 120
+        
+        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "1코리안타이틀", TitleEng: "1EngTitle", Price: "11000"))
+        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "2코리안타이틀", TitleEng: "2EngTitle", Price: "10000"))
+        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "3코리안타이틀", TitleEng: "3EngTitle", Price: "200"))
+        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "4코리안타이틀", TitleEng: "4EngTitle", Price: "3000"))
+        menus.append(Menu(ImgUrl: "https://picsum.photos/100", TitleKor: "5코리안타이틀", TitleEng: "5EngTitle", Price: "1230"))
+        
+        
+        // TableView에 Cell 등록
+        let nibName = UINib(nibName: "MenuCell", bundle: nil)
+        menuListTableView.register(nibName, forCellReuseIdentifier: "MenuCell")
+        
     }
-    */
 
 }
+
+extension MenuVC: UITableViewDelegate, UITableViewDataSource {
+    
+    // TableView item 개수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menus.count
+    }
+    
+    // TableView Cell의 Object
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = menuListTableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
+        
+        let url = URL(string: menus[indexPath.row].ImgUrl)
+        cell.menuImage.load(url: url!)
+        cell.menuTitleKor.text = menus[indexPath.row].TitleKor
+        cell.menuTitleEng.text = menus[indexPath.row].TitleEng
+        cell.menuPrice.text = menus[indexPath.row].Price + " 원"
+        
+        return cell
+        
+    }
+}
+
