@@ -14,6 +14,11 @@
 		2E7945332A453CDB006D7D9E /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7945322A453CDB006D7D9E /* Other.storyboard */; };
 		2E7E19072A455BAE00DABCA0 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E19062A455BAE00DABCA0 /* OrderVC.swift */; };
 		2E7E19092A4560DB00DABCA0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E19082A4560DB00DABCA0 /* CategoryTableViewCell.swift */; };
+		2E7E19102A456A7100DABCA0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7E190F2A456A7100DABCA0 /* Search.storyboard */; };
+		2E7E19122A4578EA00DABCA0 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E19112A4578EA00DABCA0 /* SearchVC.swift */; };
+		2E7E19142A458B6000DABCA0 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7E19132A458B6000DABCA0 /* SearchResult.storyboard */; };
+		2E7E19162A458BA300DABCA0 /* SearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E19152A458BA300DABCA0 /* SearchResultVC.swift */; };
+		2E7E191A2A45BDAE00DABCA0 /* LoadUrlImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E19192A45BDAE00DABCA0 /* LoadUrlImage.swift */; };
 		5115FC902A4530FD007C2ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FC8F2A4530FD007C2ED9 /* AppDelegate.swift */; };
 		5115FC922A4530FD007C2ED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FC912A4530FD007C2ED9 /* SceneDelegate.swift */; };
 		5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FC932A4530FD007C2ED9 /* ViewController.swift */; };
@@ -31,6 +36,11 @@
 		2E7945322A453CDB006D7D9E /* Other.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		2E7E19062A455BAE00DABCA0 /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		2E7E19082A4560DB00DABCA0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		2E7E190F2A456A7100DABCA0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		2E7E19112A4578EA00DABCA0 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		2E7E19132A458B6000DABCA0 /* SearchResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
+		2E7E19152A458BA300DABCA0 /* SearchResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultVC.swift; sourceTree = "<group>"; };
+		2E7E19192A45BDAE00DABCA0 /* LoadUrlImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUrlImage.swift; sourceTree = "<group>"; };
 		5115FC8C2A4530FD007C2ED9 /* StarbucksClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5115FC8F2A4530FD007C2ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5115FC912A4530FD007C2ED9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +76,7 @@
 		2E7E190A2A4567AA00DABCA0 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				2E7E19172A45BAD100DABCA0 /* Search */,
 				2E7E19062A455BAE00DABCA0 /* OrderVC.swift */,
 				2E7E19082A4560DB00DABCA0 /* CategoryTableViewCell.swift */,
 				2E79452E2A453CD3006D7D9E /* Order.storyboard */,
@@ -105,6 +116,25 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		2E7E19172A45BAD100DABCA0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2E7E190F2A456A7100DABCA0 /* Search.storyboard */,
+				2E7E19112A4578EA00DABCA0 /* SearchVC.swift */,
+				2E7E19132A458B6000DABCA0 /* SearchResult.storyboard */,
+				2E7E19152A458BA300DABCA0 /* SearchResultVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2E7E19182A45BD9D00DABCA0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E7E19192A45BDAE00DABCA0 /* LoadUrlImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5115FC832A4530FD007C2ED9 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +155,7 @@
 		5115FC8E2A4530FD007C2ED9 /* StarbucksClone */ = {
 			isa = PBXGroup;
 			children = (
+				2E7E19182A45BD9D00DABCA0 /* Extension */,
 				2E7E190B2A45680600DABCA0 /* Home */,
 				2E7E190C2A45680B00DABCA0 /* Pay */,
 				2E7E190A2A4567AA00DABCA0 /* Order */,
@@ -199,8 +230,10 @@
 			files = (
 				2E7945312A453CD7006D7D9E /* Shop.storyboard in Resources */,
 				5115FCA42A45324E007C2ED9 /* .gitignore in Resources */,
+				2E7E19142A458B6000DABCA0 /* SearchResult.storyboard in Resources */,
 				2E7945332A453CDB006D7D9E /* Other.storyboard in Resources */,
 				2E79452B2A453CC8006D7D9E /* Home.storyboard in Resources */,
+				2E7E19102A456A7100DABCA0 /* Search.storyboard in Resources */,
 				5115FC9C2A4530FE007C2ED9 /* LaunchScreen.storyboard in Resources */,
 				2E79452D2A453CCE006D7D9E /* Pay.storyboard in Resources */,
 				2E79452F2A453CD3006D7D9E /* Order.storyboard in Resources */,
@@ -216,7 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7E19122A4578EA00DABCA0 /* SearchVC.swift in Sources */,
+				2E7E19162A458BA300DABCA0 /* SearchResultVC.swift in Sources */,
 				2E7E19092A4560DB00DABCA0 /* CategoryTableViewCell.swift in Sources */,
+				2E7E191A2A45BDAE00DABCA0 /* LoadUrlImage.swift in Sources */,
 				5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */,
 				2E7E19072A455BAE00DABCA0 /* OrderVC.swift in Sources */,
 				5115FC902A4530FD007C2ED9 /* AppDelegate.swift in Sources */,

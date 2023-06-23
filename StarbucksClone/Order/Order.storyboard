@@ -101,7 +101,7 @@
                         <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="zvB-y6-X22">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="2eR-hW-Qpu" kind="presentation" modalPresentationStyle="fullScreen" id="ZhP-hD-OBB"/>
+                                <action selector="searchBtnTap:" destination="Y6W-OH-hqX" id="YFq-O6-acC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -127,7 +127,7 @@
         <!--Order-->
         <scene sceneID="fIB-h0-fvh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AV8-Dj-YlV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Order1" automaticallyAdjustsScrollViewInsets="NO" id="AV8-Dj-YlV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Order" id="pbr-E4-9aG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="47C-SL-abz">

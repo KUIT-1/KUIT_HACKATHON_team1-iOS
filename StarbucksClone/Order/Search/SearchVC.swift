@@ -10,6 +10,8 @@ import UIKit
 class SearchVC: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
+    
+    weak var delegate: OrderVC?
 
     @IBAction func cancelBtnTapped(_ sender: Any) {
         // Back to Order Storyboard
@@ -37,20 +39,23 @@ class SearchVC: UIViewController {
 }
 
 extension SearchVC: UITextFieldDelegate{
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        // Text 없을 때는 무반응
-        if searchTextField.text != ""{
-            print(searchTextField.text)
-            // 1. 최근 검색어 로컬DB 저장
-            // 2. 현재 검색창 dismiss
-            // 3. ## 검색 API 호출
-            // 4. 결과 페이지 띄우기
-            
+        // Text가 비어 있으면 아무 작업도 하지 않음
+        guard let searchText = searchTextField.text, !searchText.isEmpty else {
+            return true
+        }
+
+        dismiss(animated: true) {
+            self.delegate?.pushSearchResultView(searchText: searchText)
         }
         
         return true
     }
+
+}
     
+protocol pushSearchResultView{
+    func pushSearchResultView(searchText: String)
 }
