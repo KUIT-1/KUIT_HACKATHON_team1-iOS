@@ -1,0 +1,6 @@
+## User settings
+xcuserdata/
+Package.resolved
+
+*.xcconfig
+.DS_Store
