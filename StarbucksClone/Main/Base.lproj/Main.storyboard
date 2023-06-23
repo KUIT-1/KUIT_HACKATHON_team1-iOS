@@ -17,10 +17,10 @@
             </objects>
             <point key="canvasLocation" x="-785" y="342"/>
         </scene>
-        <!--Pay-->
+        <!--Shop-->
         <scene sceneID="ByU-U7-ilM">
             <objects>
-                <viewControllerPlaceholder storyboardName="Pay" id="Ike-GM-OU1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Shop" id="Ike-GM-OU1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="WrF-sv-EX6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYC-Jj-pmd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -33,6 +33,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0gm-lp-joT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ej1-9j-zXK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -24,6 +24,9 @@
 		5115FCA62A4559D6007C2ED9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FCA52A4559D6007C2ED9 /* HomeVC.swift */; };
 		5115FCA82A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */; };
 		5115FCAA2A4584E3007C2ED9 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 5115FCA92A4584E3007C2ED9 /* .gitattributes */; };
+		5115FCAD2A4588F2007C2ED9 /* Basket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5115FCAC2A4588F2007C2ED9 /* Basket.storyboard */; };
+		5115FCAF2A458C88007C2ED9 /* BasketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115FCAE2A458C88007C2ED9 /* BasketVC.swift */; };
+		51AB7D542A45B1C4003CA0B4 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB7D532A45B1C4003CA0B4 /* BasketTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		5115FCA52A4559D6007C2ED9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendMenyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5115FCA92A4584E3007C2ED9 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		5115FCAC2A4588F2007C2ED9 /* Basket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basket.storyboard; sourceTree = "<group>"; };
+		5115FCAE2A458C88007C2ED9 /* BasketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketVC.swift; sourceTree = "<group>"; };
+		51AB7D532A45B1C4003CA0B4 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 		2E7E190A2A4567AA00DABCA0 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				5115FCAB2A4588E1007C2ED9 /* Basket */,
 				2E7E19062A455BAE00DABCA0 /* OrderVC.swift */,
 				2E7E19082A4560DB00DABCA0 /* CategoryTableViewCell.swift */,
 				2E79452E2A453CD3006D7D9E /* Order.storyboard */,
@@ -82,6 +89,8 @@
 		2E7E190B2A45680600DABCA0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */,
+				5115FCA52A4559D6007C2ED9 /* HomeVC.swift */,
 				2E79452A2A453CC8006D7D9E /* Home.storyboard */,
 			);
 			path = Home;
@@ -142,10 +151,18 @@
 				5115FC912A4530FD007C2ED9 /* SceneDelegate.swift */,
 				5115FC982A4530FE007C2ED9 /* Assets.xcassets */,
 				5115FC9D2A4530FE007C2ED9 /* Info.plist */,
-				5115FCA52A4559D6007C2ED9 /* HomeVC.swift */,
-				5115FCA72A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift */,
 			);
 			path = StarbucksClone;
+			sourceTree = "<group>";
+		};
+		5115FCAB2A4588E1007C2ED9 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				5115FCAC2A4588F2007C2ED9 /* Basket.storyboard */,
+				5115FCAE2A458C88007C2ED9 /* BasketVC.swift */,
+				51AB7D532A45B1C4003CA0B4 /* BasketTableViewCell.swift */,
+			);
+			path = Basket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5115FCAD2A4588F2007C2ED9 /* Basket.storyboard in Resources */,
 				2E7945312A453CD7006D7D9E /* Shop.storyboard in Resources */,
 				5115FCA42A45324E007C2ED9 /* .gitignore in Resources */,
 				2E7945332A453CDB006D7D9E /* Other.storyboard in Resources */,
@@ -229,7 +247,9 @@
 				5115FCA82A456DC3007C2ED9 /* HomeRecommendMenyCollectionViewCell.swift in Sources */,
 				5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */,
 				5115FCA62A4559D6007C2ED9 /* HomeVC.swift in Sources */,
+				51AB7D542A45B1C4003CA0B4 /* BasketTableViewCell.swift in Sources */,
 				2E7E19092A4560DB00DABCA0 /* CategoryTableViewCell.swift in Sources */,
+				5115FCAF2A458C88007C2ED9 /* BasketVC.swift in Sources */,
 				5115FC942A4530FD007C2ED9 /* ViewController.swift in Sources */,
 				2E7E19072A455BAE00DABCA0 /* OrderVC.swift in Sources */,
 				5115FC902A4530FD007C2ED9 /* AppDelegate.swift in Sources */,
