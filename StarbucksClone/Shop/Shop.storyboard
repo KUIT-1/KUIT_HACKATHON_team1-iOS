@@ -17,18 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEd-05-oIg">
-                                <rect key="frame" x="175" y="416" width="40" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-Yu-FkE">
+                                <rect key="frame" x="24" y="107" width="56" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop" translatesAutoresizingMaskIntoConstraints="NO" id="Vdq-cW-VTE">
+                                <rect key="frame" x="0.0" y="146" width="393" height="514"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="514" id="kf5-iS-Bmq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vdq-cW-VTE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EC2-od-ZyK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vdq-cW-VTE" secondAttribute="trailing" id="g1f-Gg-eGf"/>
+                            <constraint firstItem="z8k-Yu-FkE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="rjH-4H-3Gb"/>
+                            <constraint firstItem="Vdq-cW-VTE" firstAttribute="top" secondItem="z8k-Yu-FkE" secondAttribute="bottom" constant="12" id="tOn-Ru-bKX"/>
+                            <constraint firstItem="z8k-Yu-FkE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="vTu-AM-X4i"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shop" id="ih6-Xo-iYm"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="bag.fill" catalog="system" id="ih6-Xo-iYm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -37,6 +49,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="shop" width="1179" height="1542"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

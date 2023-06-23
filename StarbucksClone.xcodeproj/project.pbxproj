@@ -403,6 +403,7 @@
 				DEVELOPMENT_TEAM = 99KH3TLG9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StarbucksClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "스타벅스";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -431,6 +432,7 @@
 				DEVELOPMENT_TEAM = 99KH3TLG9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StarbucksClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "스타벅스";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
