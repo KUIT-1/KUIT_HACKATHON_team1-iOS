@@ -34,6 +34,11 @@ class BasketVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                                 title: "따뜻한 카페 아메리카노",
                                 engilishTitle: "Hot Caffe Americano",
                                 options: "Hot | Grande | 개인컵",
+                                cost: "4500원"),
+                     BasketList(imageURL: "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80",
+                                title: "따뜻한 카페 아메리카노",
+                                engilishTitle: "Hot Caffe Americano",
+                                options: "Hot | Grande | 개인컵",
                                 cost: "4500원")]
     
     override func viewDidLoad() {
@@ -75,12 +80,13 @@ class BasketVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         // 이미지를 받아와서 화면에 보여줄 작업을 수행합니다.
                         // 예: UIImageView에 이미지 설정
                         cell.menuImage.image = image
-                        cell.menuImage.clipsToBounds = true
-                        cell.menuImage.layer.cornerRadius = 50
                     }
                 }
             }.resume()
         }
+        
+        cell.menuImage.clipsToBounds = true
+        cell.menuImage.layer.cornerRadius = 50
     
         return cell
     }
