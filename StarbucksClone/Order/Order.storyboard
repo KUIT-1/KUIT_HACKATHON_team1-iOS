@@ -17,6 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mX5-0a-Bh5">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aWD-Wy-lLQ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Order" id="D8z-DN-u8h">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="VLa-Rr-hWc">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="86v-c5-u8G">
+                                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                            </button>
+                                            <connections>
+                                                <action selector="searchBtnTap:" destination="Y6W-OH-hqX" id="LiZ-5l-3wT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lln-w7-chC">
                                 <rect key="frame" x="0.0" y="103" width="393" height="61"/>
                                 <subviews>
@@ -97,6 +121,7 @@
                             <constraint firstItem="tHJ-W1-VaA" firstAttribute="top" secondItem="lln-w7-chC" secondAttribute="bottom" constant="8" symbolic="YES" id="jdS-ji-cmR"/>
                         </constraints>
                     </view>
+
                     <navigationItem key="navigationItem" id="y34-Yq-po8">
                         <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="zvB-y6-X22">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,6 +130,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoryTableView" destination="tHJ-W1-VaA" id="5BW-pX-jwg"/>
@@ -162,6 +188,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cup.and.saucer.fill" catalog="system" width="128" height="91"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
